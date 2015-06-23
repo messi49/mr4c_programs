@@ -1,0 +1,12 @@
+{
+	"algoConfig" : 
+	{
+		"inline" : 
+		{
+			"artifact" : "Map",
+          	"name" : "map",
+          	"type" : "NATIVEC",
+          	"extras" : ["gdal"]
+        }
+	}
+}
