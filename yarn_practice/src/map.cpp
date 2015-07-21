@@ -27,6 +27,8 @@ public:
 		std::cout << "  Hello World!!" << std::endl;
 		printf("Hello messi!!\n");
 
+		context.log( MR4C::Logger::INFO, "Hello messi!!!");
+
 		//close message block		
 		std::cout<<nativeHdr<<std::endl; 
 	}

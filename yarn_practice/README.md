@@ -11,6 +11,8 @@ Additionally, we introduce a simple map reduce workflow including two steps that
     -Hcores.max
     -Hmemory.min
     -Hmemory.max
+    -Hgpu-memory.min
+    -Hgpu-memory.max
 
 For example:
 

@@ -1,21 +1,21 @@
-2015-06-23 15:39:59,651 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(167): Loaded MR4C logging config only from file /etc/mr4c/log4cxx.properties
-2015-06-23 15:39:59,651 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c
-2015-06-23 15:39:59,651 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.algo is going to ./logs/mr4c-algo.log
-2015-06-23 15:39:59,651 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.native is going to ./logs/mr4c-native.log
-2015-06-23 15:39:59,651 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c.native.util.MR4CLogging
-2015-06-23 15:39:59,651 INFO  mr4c.native.algorithm.AlgorithmRegistry src/cpp/impl/algorithm/AlgorithmRegistry.cpp(50): Registered algorithm [imageinfo]
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(128): Begin deserializing input data
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(136): Deserializing keyspace
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(146): Deserializing config params
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(159): Deserializing input dataset [imageIn]
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalDatasetSerializer src/cpp/impl/external/ExternalDatasetSerializer.cpp(97): Deserialized 1 file keys and 0 metadata keys
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(132): Done deserializing input data
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(166): Begin deserializing output data
-2015-06-23 15:39:59,698 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(174): Done deserializing output data
-2015-06-23 15:39:59,699 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(152): Logger registered
-2015-06-23 15:39:59,699 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(152): Logger registered
-2015-06-23 15:39:59,699 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(159): Progress reporter registered
-2015-06-23 15:39:59,699 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(166): Message consumer registered
-2015-06-23 15:39:59,699 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(53): Checking data passed to algorithm [imageinfo]
-2015-06-23 15:39:59,699 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(135): Begin config params
-2015-06-23 15:39:59,699 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(142): End config params
+2015-06-23 15:56:39,882 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(167): Loaded MR4C logging config only from file /etc/mr4c/log4cxx.properties
+2015-06-23 15:56:39,882 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c
+2015-06-23 15:56:39,882 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.algo is going to ./logs/mr4c-algo.log
+2015-06-23 15:56:39,882 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.native is going to ./logs/mr4c-native.log
+2015-06-23 15:56:39,882 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c.native.util.MR4CLogging
+2015-06-23 15:56:39,882 INFO  mr4c.native.algorithm.AlgorithmRegistry src/cpp/impl/algorithm/AlgorithmRegistry.cpp(50): Registered algorithm [imageinfo]
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(128): Begin deserializing input data
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(136): Deserializing keyspace
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(146): Deserializing config params
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(159): Deserializing input dataset [imageIn]
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalDatasetSerializer src/cpp/impl/external/ExternalDatasetSerializer.cpp(97): Deserialized 1 file keys and 0 metadata keys
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(132): Done deserializing input data
+2015-06-23 15:56:39,931 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(166): Begin deserializing output data
+2015-06-23 15:56:39,932 INFO  mr4c.native.external.ExternalAlgorithmDataSerializer src/cpp/impl/external/ExternalAlgorithmDataSerializer.cpp(174): Done deserializing output data
+2015-06-23 15:56:39,932 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(152): Logger registered
+2015-06-23 15:56:39,932 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(152): Logger registered
+2015-06-23 15:56:39,932 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(159): Progress reporter registered
+2015-06-23 15:56:39,932 INFO  mr4c.native.context.AlgorithmContext src/cpp/impl/context/AlgorithmContext.cpp(166): Message consumer registered
+2015-06-23 15:56:39,932 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(53): Checking data passed to algorithm [imageinfo]
+2015-06-23 15:56:39,932 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(135): Begin config params
+2015-06-23 15:56:39,932 INFO  mr4c.native.algorithm.AlgorithmRunner src/cpp/impl/algorithm/AlgorithmRunner.cpp(142): End config params

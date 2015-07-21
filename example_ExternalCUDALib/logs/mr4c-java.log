@@ -1,47 +1,49 @@
-2015-06-23 15:39:58,694 INFO  mr4c.java.util.MR4CLogging: Added MR4C logging config from file file:/etc/mr4c/log4j.properties 
-2015-06-23 15:39:58,695 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.javaalgo is going to /home/gpu/workspace/mr4c_programs/example4_ExternalLib/./logs/mr4c-java-algo.log
-2015-06-23 15:39:58,695 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.java is going to /home/gpu/workspace/mr4c_programs/example4_ExternalLib/./logs/mr4c-java.log
-2015-06-23 15:39:58,709 INFO  mr4c.java.AlgoRunner: No raw properties
-2015-06-23 15:39:58,709 INFO  mr4c.java.AlgoRunner: No hadoop properties
-2015-06-23 15:39:58,710 INFO  mr4c.java.AlgoRunner: No topics properties
-2015-06-23 15:39:58,710 INFO  mr4c.java.AlgoRunner: No algo properties
-2015-06-23 15:39:58,710 INFO  mr4c.java.AlgoRunner: No stats properties
-2015-06-23 15:39:58,710 INFO  mr4c.java.AlgoRunner: No runtime properties
-2015-06-23 15:39:58,711 INFO  mr4c.java.AlgoRunner: Begin dump of core properties
-2015-06-23 15:39:58,711 INFO  mr4c.java.AlgoRunner: #
-#Tue Jun 23 15:39:58 JST 2015
+2015-06-23 15:56:38,872 INFO  mr4c.java.util.MR4CLogging: Added MR4C logging config from file file:/etc/mr4c/log4j.properties 
+2015-06-23 15:56:38,873 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.javaalgo is going to /home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/./logs/mr4c-java-algo.log
+2015-06-23 15:56:38,873 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.java is going to /home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/./logs/mr4c-java.log
+2015-06-23 15:56:38,888 INFO  mr4c.java.AlgoRunner: No raw properties
+2015-06-23 15:56:38,889 INFO  mr4c.java.AlgoRunner: No hadoop properties
+2015-06-23 15:56:38,889 INFO  mr4c.java.AlgoRunner: No topics properties
+2015-06-23 15:56:38,889 INFO  mr4c.java.AlgoRunner: No algo properties
+2015-06-23 15:56:38,890 INFO  mr4c.java.AlgoRunner: No stats properties
+2015-06-23 15:56:38,890 INFO  mr4c.java.AlgoRunner: No runtime properties
+2015-06-23 15:56:38,891 INFO  mr4c.java.AlgoRunner: Begin dump of core properties
+2015-06-23 15:56:38,891 INFO  mr4c.java.AlgoRunner: #
+#Tue Jun 23 15:56:38 JST 2015
 site.conf=
-lib.path=/usr/local/cuda-7.0/lib64\:/usr/include/gdal\:/usr/local/cuda/lib\:/usr/local/cuda/lib64\:\:/lib\:\:/home/gpu/workspace/mr4c_programs/example4_ExternalLib/lib\:.\:/usr/local/lib
-root.dir=/home/gpu/workspace/mr4c_programs/example4_ExternalLib
+lib.path=/usr/local/cuda-7.0/lib64\:/usr/include/gdal\:/usr/local/cuda/lib\:/usr/local/cuda/lib64\:\:/lib\:\:/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/lib\:.\:/usr/local/lib
+root.dir=/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib
 log4j.conf=
 
-2015-06-23 15:39:58,711 INFO  mr4c.java.AlgoRunner: End dump of core properties
-2015-06-23 15:39:58,713 INFO  mr4c.java.AlgoRunner: No s3 properties
-2015-06-23 15:39:58,714 INFO  mr4c.java.AlgoRunner: No custom properties
-2015-06-23 15:39:58,717 INFO  mr4c.java.sources.ConfiguredExecutionSource: Loading execution config from [./imageinfo.json]
-2015-06-23 15:39:58,757 INFO  mr4c.java.algorithm.Algorithms: Algorithm config is inline
-2015-06-23 15:39:58,766 INFO  mr4c.java.sources.DatasetSources: Created dataset source [input/sample.tif]
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Begin loading native libraries
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.library.path=/usr/local/cuda-7.0/lib64:/usr/include/gdal:/usr/local/cuda/lib:/usr/local/cuda/lib64::/lib::/home/gpu/workspace/mr4c_programs/example4_ExternalLib/lib:.:/usr/local/lib
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.platform.library.path=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:/usr/include/gdal:/usr/local/cuda/lib:/usr/local/cuda/lib64::/lib::/home/gpu/workspace/mr4c_programs/example4_ExternalLib/lib
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: MR4C native library found at [/usr/local/lib/libmr4c.so]
-2015-06-23 15:39:59,648 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading native algorithm library [ImageInfo]
-2015-06-23 15:39:59,651 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Native algorithm library found at [/home/gpu/workspace/mr4c_programs/example4_ExternalLib/lib/libImageInfo.so]
-2015-06-23 15:39:59,651 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading extra native library [gdal]
-2015-06-23 15:39:59,664 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Extra native library found at [/home/gpu/workspace/mr4c_programs/example4_ExternalLib/libgdal.so]
-2015-06-23 15:39:59,664 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: End loading native libraries
-2015-06-23 15:39:59,667 INFO  mr4c.java.AlgoRunner: Begin loading input dataset [imageIn]
-2015-06-23 15:39:59,667 INFO  mr4c.java.sources.BinaryDatasetSource: Begin reading dataset
-2015-06-23 15:39:59,667 INFO  mr4c.java.sources.BinaryDatasetSource: Checking for single binary file at [input/sample.tif]
-2015-06-23 15:39:59,670 INFO  mr4c.java.sources.BinaryDatasetSource: Done reading dataset
-2015-06-23 15:39:59,670 INFO  mr4c.java.AlgoRunner: Input dataset [imageIn] has 1 file keys and 0 metadata keys
-2015-06-23 15:39:59,670 INFO  mr4c.java.AlgoRunner: End loading input dataset [imageIn]
-2015-06-23 15:39:59,672 INFO  mr4c.java.AlgoRunner: Executing algorithm [imageinfo]
-2015-06-23 15:39:59,672 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Begin serializing input data
-2015-06-23 15:39:59,673 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing keyspace
-2015-06-23 15:39:59,674 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing config params
-2015-06-23 15:39:59,674 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing input dataset [imageIn]
-2015-06-23 15:39:59,693 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: End serializing input data
-2015-06-23 15:39:59,693 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Begin serializing output data
-2015-06-23 15:39:59,693 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: End serializing output data
+2015-06-23 15:56:38,891 INFO  mr4c.java.AlgoRunner: End dump of core properties
+2015-06-23 15:56:38,893 INFO  mr4c.java.AlgoRunner: No s3 properties
+2015-06-23 15:56:38,893 INFO  mr4c.java.AlgoRunner: No custom properties
+2015-06-23 15:56:38,897 INFO  mr4c.java.sources.ConfiguredExecutionSource: Loading execution config from [./imageinfo.json]
+2015-06-23 15:56:38,939 INFO  mr4c.java.algorithm.Algorithms: Algorithm config is inline
+2015-06-23 15:56:38,949 INFO  mr4c.java.sources.DatasetSources: Created dataset source [input/sample.tif]
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Begin loading native libraries
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.library.path=/usr/local/cuda-7.0/lib64:/usr/include/gdal:/usr/local/cuda/lib:/usr/local/cuda/lib64::/lib::/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/lib:.:/usr/local/lib
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.platform.library.path=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:/usr/include/gdal:/usr/local/cuda/lib:/usr/local/cuda/lib64::/lib::/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/lib
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: MR4C native library found at [/usr/local/lib/libmr4c.so]
+2015-06-23 15:56:39,879 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading native algorithm library [ImageInfo]
+2015-06-23 15:56:39,883 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Native algorithm library found at [/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/lib/libImageInfo.so]
+2015-06-23 15:56:39,883 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading extra native library [gdal]
+2015-06-23 15:56:39,896 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Extra native library found at [/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/libgdal.so]
+2015-06-23 15:56:39,896 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading extra native library [cuda]
+2015-06-23 15:56:39,897 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Extra native library found at [/home/gpu/workspace/mr4c_programs/example_ExternalCUDALib/libcuda.so]
+2015-06-23 15:56:39,897 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: End loading native libraries
+2015-06-23 15:56:39,900 INFO  mr4c.java.AlgoRunner: Begin loading input dataset [imageIn]
+2015-06-23 15:56:39,900 INFO  mr4c.java.sources.BinaryDatasetSource: Begin reading dataset
+2015-06-23 15:56:39,900 INFO  mr4c.java.sources.BinaryDatasetSource: Checking for single binary file at [input/sample.tif]
+2015-06-23 15:56:39,903 INFO  mr4c.java.sources.BinaryDatasetSource: Done reading dataset
+2015-06-23 15:56:39,903 INFO  mr4c.java.AlgoRunner: Input dataset [imageIn] has 1 file keys and 0 metadata keys
+2015-06-23 15:56:39,903 INFO  mr4c.java.AlgoRunner: End loading input dataset [imageIn]
+2015-06-23 15:56:39,905 INFO  mr4c.java.AlgoRunner: Executing algorithm [imageinfo]
+2015-06-23 15:56:39,906 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Begin serializing input data
+2015-06-23 15:56:39,906 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing keyspace
+2015-06-23 15:56:39,908 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing config params
+2015-06-23 15:56:39,908 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Serializing input dataset [imageIn]
+2015-06-23 15:56:39,927 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: End serializing input data
+2015-06-23 15:56:39,927 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: Begin serializing output data
+2015-06-23 15:56:39,927 INFO  mr4c.java.nativec.ExternalAlgorithmDataSerializer: End serializing output data

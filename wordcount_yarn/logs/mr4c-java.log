@@ -1,0 +1,188 @@
+2015-07-21 16:16:17,539 INFO  mr4c.java.util.MR4CLogging: Log4j initialization loaded MR4C logging config
+2015-07-21 16:16:17,541 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.javaalgo is going to /home/gpu/workspace/mr4c_programs/wordcount_yarn/./logs/mr4c-java-algo.log
+2015-07-21 16:16:17,541 INFO  mr4c.java.util.MR4CLogging: Logger mr4c.java is going to /home/gpu/workspace/mr4c_programs/wordcount_yarn/./logs/mr4c-java.log
+2015-07-21 16:16:17,749 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args passed to options parser: [/usr/local/mr4c/java/dist/mr4c-with-libs.jar, ./map.json, -Htasks=2, -Hcores.min=1, -Hcores.max=2, -Hmemory.min=1024, -Hmemory.max=2048]
+2015-07-21 16:16:17,846 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args returned from options parser: [/usr/local/mr4c/java/dist/mr4c-with-libs.jar, ./map.json, -Htasks=2, -Hcores.min=1, -Hcores.max=2, -Hmemory.min=1024, -Hmemory.max=2048]
+2015-07-21 16:16:17,855 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args after parsing out config: [/usr/local/mr4c/java/dist/mr4c-with-libs.jar, ./map.json]
+2015-07-21 16:16:17,868 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No raw properties
+2015-07-21 16:16:17,869 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Begin dump of hadoop properties
+2015-07-21 16:16:17,869 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: #
+#Tue Jul 21 16:16:17 JST 2015
+algorithm.classpath=
+memory.min=1024
+cores.max=2
+memory.max=2048
+tasks=2
+cores.min=1
+
+2015-07-21 16:16:17,869 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: End dump of hadoop properties
+2015-07-21 16:16:17,875 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No topics properties
+2015-07-21 16:16:17,875 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No algo properties
+2015-07-21 16:16:17,876 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No stats properties
+2015-07-21 16:16:17,876 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No runtime properties
+2015-07-21 16:16:17,877 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Begin dump of core properties
+2015-07-21 16:16:17,877 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: #
+#Tue Jul 21 16:16:17 JST 2015
+site.conf=./site.json
+lib.path=/usr/local/cuda-7.0/lib64\:/usr/include/gdal\:\:/lib\:\:/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib\:/usr/local/lib\:.\:/usr/local/lib
+root.dir=/home/gpu/workspace/mr4c_programs/wordcount_yarn
+log4j.conf=
+
+2015-07-21 16:16:17,877 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: End dump of core properties
+2015-07-21 16:16:17,878 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No s3 properties
+2015-07-21 16:16:17,878 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: No custom properties
+2015-07-21 16:16:17,883 INFO  mr4c.java.config.site.MR4CSite: Reading site config from [./site.json]
+2015-07-21 16:16:17,936 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args passed to options parser: [-jt, localhost:8032, -fs, hdfs://localhost:8020]
+2015-07-21 16:16:17,939 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args returned from options parser: []
+2015-07-21 16:16:17,939 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args passed to options parser: []
+2015-07-21 16:16:17,940 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Args returned from options parser: []
+2015-07-21 16:16:17,957 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Specified cluster is [Job Tracker=[localhost:8032]; File System=[hdfs://localhost:8020]]
+2015-07-21 16:16:18,475 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Request for memory = 2048
+2015-07-21 16:16:18,475 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Request for cores = 2
+2015-07-21 16:16:18,477 INFO  mr4c.java.AlgoRunner: No raw properties
+2015-07-21 16:16:18,478 INFO  mr4c.java.AlgoRunner: Begin dump of hadoop properties
+2015-07-21 16:16:18,478 INFO  mr4c.java.AlgoRunner: #
+#Tue Jul 21 16:16:18 JST 2015
+algorithm.classpath=
+mr4c.jar=/usr/local/mr4c/java/dist/mr4c-with-libs.jar
+memory.min=1024
+cores.max=2
+remote=false
+memory.max=2048
+tasks=2
+cores.min=1
+
+2015-07-21 16:16:18,478 INFO  mr4c.java.AlgoRunner: End dump of hadoop properties
+2015-07-21 16:16:18,478 INFO  mr4c.java.AlgoRunner: No topics properties
+2015-07-21 16:16:18,478 INFO  mr4c.java.AlgoRunner: No algo properties
+2015-07-21 16:16:18,479 INFO  mr4c.java.AlgoRunner: No stats properties
+2015-07-21 16:16:18,479 INFO  mr4c.java.AlgoRunner: No runtime properties
+2015-07-21 16:16:18,479 INFO  mr4c.java.AlgoRunner: Begin dump of core properties
+2015-07-21 16:16:18,479 INFO  mr4c.java.AlgoRunner: #
+#Tue Jul 21 16:16:18 JST 2015
+site.conf=./site.json
+lib.path=/usr/local/cuda-7.0/lib64\:/usr/include/gdal\:\:/lib\:\:/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib\:/usr/local/lib\:.\:/usr/local/lib
+exe.conf=./map.json
+root.dir=/home/gpu/workspace/mr4c_programs/wordcount_yarn
+log4j.conf=
+
+2015-07-21 16:16:18,479 INFO  mr4c.java.AlgoRunner: End dump of core properties
+2015-07-21 16:16:18,480 INFO  mr4c.java.AlgoRunner: No s3 properties
+2015-07-21 16:16:18,480 INFO  mr4c.java.AlgoRunner: No custom properties
+2015-07-21 16:16:18,481 INFO  mr4c.java.sources.ConfiguredExecutionSource: Loading execution config from [./map.json]
+2015-07-21 16:16:18,491 INFO  mr4c.java.algorithm.Algorithms: Algorithm config is inline
+2015-07-21 16:16:18,500 INFO  mr4c.java.sources.FileSources: Creating file source for [hdfs://localhost:8020/user/gpu/skysatIn]
+2015-07-21 16:16:18,500 INFO  mr4c.java.sources.FileSources: Creating HDFS file source for directory [hdfs://localhost:8020/user/gpu/skysatIn]
+2015-07-21 16:16:18,804 INFO  mr4c.java.sources.FilesDatasetSourceConfig: Files dataset source config is inline
+2015-07-21 16:16:18,811 INFO  mr4c.java.sources.DatasetSources: Created dataset source [directory dataset source stored by [hdfs://localhost:8020/user/gpu/skysatIn]]
+2015-07-21 16:16:18,811 INFO  mr4c.java.sources.FileSources: Creating file source for [hdfs://localhost:8020/user/gpu/skysatReduce]
+2015-07-21 16:16:18,811 INFO  mr4c.java.sources.FileSources: Creating HDFS file source for directory [hdfs://localhost:8020/user/gpu/skysatReduce]
+2015-07-21 16:16:18,822 INFO  mr4c.java.sources.FilesDatasetSourceConfig: Files dataset source config is inline
+2015-07-21 16:16:18,823 INFO  mr4c.java.sources.DatasetSources: Created dataset source [directory dataset source stored by [hdfs://localhost:8020/user/gpu/skysatReduce]]
+2015-07-21 16:16:19,668 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Begin loading native libraries
+2015-07-21 16:16:19,668 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.library.path=/usr/local/cuda-7.0/lib64:/usr/include/gdal::/lib::/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib:/usr/local/lib:.:/usr/local/lib
+2015-07-21 16:16:19,668 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.platform.library.path=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib
+2015-07-21 16:16:19,669 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:/usr/include/gdal::/lib::/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib:/usr/local/lib
+2015-07-21 16:16:19,669 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: MR4C native library found at [/usr/local/lib/libmr4c.so]
+2015-07-21 16:16:19,669 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading native algorithm library [Map]
+2015-07-21 16:16:19,671 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Native algorithm library found at [/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib/libMap.so]
+2015-07-21 16:16:19,672 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading extra native library [gdal]
+2015-07-21 16:16:19,683 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Extra native library found at [/home/gpu/workspace/mr4c_programs/wordcount_yarn/libgdal.so]
+2015-07-21 16:16:19,684 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: End loading native libraries
+2015-07-21 16:16:19,720 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: BEGIN LOG CONFIGURATION
+2015-07-21 16:16:19,721 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource core-default.xml found at jar:file:/usr/local/mr4c/java/lib/hadoop-common-2.5.0-cdh5.2.0.jar!/core-default.xml
+2015-07-21 16:16:19,721 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource core-site.xml found at null
+2015-07-21 16:16:19,721 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource hdfs-default.xml found at jar:file:/usr/local/mr4c/java/lib/hadoop-hdfs-2.5.0-cdh5.2.0.jar!/hdfs-default.xml
+2015-07-21 16:16:19,721 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource hdfs-site.xml found at null
+2015-07-21 16:16:19,721 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource mapred-default.xml found at jar:file:/usr/local/mr4c/java/lib/hadoop-mapreduce-client-core-2.5.0-cdh5.2.0.jar!/mapred-default.xml
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource mapred-site.xml found at null
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource yarn-default.xml found at jar:file:/usr/local/mr4c/java/lib/hadoop-yarn-common-2.6.0.jar!/yarn-default.xml
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource yarn-site.xml found at null
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource mr4c-hadoop-default.xml found at jar:file:/usr/local/mr4c/java/dist/mr4c-with-libs.jar!/mr4c-hadoop-default.xml
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Resource mr4c-hadoop-site.xml found at file:/usr/local/mr4c/java/conf/mr4c-hadoop-site.xml
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: yarn.resourcemanager.address=localhost:8032; source: [from -jt command line option]
+2015-07-21 16:16:19,722 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: fs.defaultFS=hdfs://localhost:8020; source: [programatically]
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: fs.default.name=hdfs://localhost:8020; source: unknown
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: mapreduce.framework.name=yarn; source: [programatically]
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: mapreduce.map.memory.mb=2048; source: [programatically]
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: mapreduce.map.cpu.vcores=2; source: [programatically]
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: mapreduce.map.gpu-memory.mb=null; source: unknown
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: mapreduce.application.classpath=null; source: unknown
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: yarn.application.classpath=null; source: unknown
+2015-07-21 16:16:19,723 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: END LOG CONFIGURATION
+2015-07-21 16:16:20,167 INFO  mr4c.java.hadoop.HadoopUtils: No raw properties
+2015-07-21 16:16:20,168 INFO  mr4c.java.hadoop.HadoopUtils: Begin dump of hadoop properties
+2015-07-21 16:16:20,169 INFO  mr4c.java.hadoop.HadoopUtils: #
+#Tue Jul 21 16:16:20 JST 2015
+algorithm.classpath=
+mr4c.jar=/tmp/hadoop-yarn/staging/gpu/.staging/job_1437461722678_0003/job.jar
+memory.min=1024
+cores.max=2
+remote=false
+memory.max=2048
+tasks=2
+cores.min=1
+
+2015-07-21 16:16:20,169 INFO  mr4c.java.hadoop.HadoopUtils: End dump of hadoop properties
+2015-07-21 16:16:20,169 INFO  mr4c.java.hadoop.HadoopUtils: No topics properties
+2015-07-21 16:16:20,169 INFO  mr4c.java.hadoop.HadoopUtils: No algo properties
+2015-07-21 16:16:20,170 INFO  mr4c.java.hadoop.HadoopUtils: No stats properties
+2015-07-21 16:16:20,170 INFO  mr4c.java.hadoop.HadoopUtils: No runtime properties
+2015-07-21 16:16:20,171 INFO  mr4c.java.hadoop.HadoopUtils: Begin dump of core properties
+2015-07-21 16:16:20,171 INFO  mr4c.java.hadoop.HadoopUtils: #
+#Tue Jul 21 16:16:20 JST 2015
+site.conf=./site.json
+lib.path=/usr/local/cuda-7.0/lib64\:/usr/include/gdal\:\:/lib\:\:/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib\:/usr/local/lib\:.\:/usr/local/lib
+exe.conf=./map.json
+root.dir=/home/gpu/workspace/mr4c_programs/wordcount_yarn
+log4j.conf=
+
+2015-07-21 16:16:20,171 INFO  mr4c.java.hadoop.HadoopUtils: End dump of core properties
+2015-07-21 16:16:20,172 INFO  mr4c.java.hadoop.HadoopUtils: No s3 properties
+2015-07-21 16:16:20,172 INFO  mr4c.java.hadoop.HadoopUtils: No custom properties
+2015-07-21 16:16:20,172 INFO  mr4c.java.sources.ConfiguredExecutionSource: Loading execution config from [./map.json]
+2015-07-21 16:16:20,174 INFO  mr4c.java.algorithm.Algorithms: Algorithm config is inline
+2015-07-21 16:16:20,175 INFO  mr4c.java.sources.FileSources: Creating file source for [hdfs://localhost:8020/user/gpu/skysatIn]
+2015-07-21 16:16:20,175 INFO  mr4c.java.sources.FileSources: Creating HDFS file source for directory [hdfs://localhost:8020/user/gpu/skysatIn]
+2015-07-21 16:16:20,184 INFO  mr4c.java.sources.FilesDatasetSourceConfig: Files dataset source config is inline
+2015-07-21 16:16:20,185 INFO  mr4c.java.sources.DatasetSources: Created dataset source [directory dataset source stored by [hdfs://localhost:8020/user/gpu/skysatIn]]
+2015-07-21 16:16:20,185 INFO  mr4c.java.sources.FileSources: Creating file source for [hdfs://localhost:8020/user/gpu/skysatReduce]
+2015-07-21 16:16:20,185 INFO  mr4c.java.sources.FileSources: Creating HDFS file source for directory [hdfs://localhost:8020/user/gpu/skysatReduce]
+2015-07-21 16:16:20,195 INFO  mr4c.java.sources.FilesDatasetSourceConfig: Files dataset source config is inline
+2015-07-21 16:16:20,196 INFO  mr4c.java.sources.DatasetSources: Created dataset source [directory dataset source stored by [hdfs://localhost:8020/user/gpu/skysatReduce]]
+2015-07-21 16:16:20,200 INFO  mr4c.java.hadoop.MR4CInputFormat: Asked for 2 splits
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Begin loading native libraries
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.library.path=/usr/local/cuda-7.0/lib64:/usr/include/gdal::/lib::/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib:/usr/local/lib:.:/usr/local/lib
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: jna.platform.library.path=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:/usr/include/gdal::/lib::/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib:/usr/local/lib
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: MR4C native library found at [/usr/local/lib/libmr4c.so]
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading native algorithm library [Map]
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Native algorithm library found at [/home/gpu/workspace/mr4c_programs/wordcount_yarn/lib/libMap.so]
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Loading extra native library [gdal]
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: Extra native library found at [/home/gpu/workspace/mr4c_programs/wordcount_yarn/libgdal.so]
+2015-07-21 16:16:20,202 INFO  mr4c.java.nativec.jna.JnaNativeAlgorithm: End loading native libraries
+2015-07-21 16:16:20,205 INFO  mr4c.java.AlgoRunner: Begin loading input dataset [imagesIn]
+2015-07-21 16:16:20,205 INFO  mr4c.java.sources.FilesDatasetSource: Begin reading dataset
+2015-07-21 16:16:20,207 INFO  mr4c.java.sources.FilesDatasetSource: Looking for dataset file named [dataset.json]
+2015-07-21 16:16:20,207 WARN  mr4c.java.sources.FilesDatasetSource: No dataset file named [dataset.json] found
+2015-07-21 16:16:20,208 INFO  mr4c.java.sources.FilesDatasetSource: Configuration specifies don't use self config
+2015-07-21 16:16:20,221 INFO  mr4c.java.sources.FilesDatasetSource: Done reading dataset
+2015-07-21 16:16:20,222 INFO  mr4c.java.AlgoRunner: Input dataset [imagesIn] has 2 file keys and 0 metadata keys
+2015-07-21 16:16:20,222 INFO  mr4c.java.AlgoRunner: End loading input dataset [imagesIn]
+2015-07-21 16:16:20,223 INFO  mr4c.java.AlgoRunner: Begin preparing output dataset [hist]
+2015-07-21 16:16:20,223 INFO  mr4c.java.AlgoRunner: End preparing output dataset [hist]
+2015-07-21 16:16:20,225 INFO  mr4c.java.hadoop.MR4CInputFormat: Dim partition is {NAME=2}
+2015-07-21 16:16:20,227 INFO  mr4c.java.hadoop.MR4CInputFormat: Generated 2 partitions
+2015-07-21 16:16:20,228 INFO  mr4c.java.hadoop.MR4CInputFormat: Begin keyspace for split #1
+2015-07-21 16:16:20,228 INFO  mr4c.java.hadoop.MR4CInputFormat: 1 elements for dimension [NAME] are [1]
+2015-07-21 16:16:20,229 INFO  mr4c.java.hadoop.MR4CInputFormat: No missing elements for dimension [NAME]
+2015-07-21 16:16:20,229 INFO  mr4c.java.hadoop.MR4CInputFormat: End keyspace for split #1
+2015-07-21 16:16:20,245 INFO  mr4c.java.hadoop.MR4CInputFormat: Hosts for split #1 are [gpu]
+2015-07-21 16:16:20,245 INFO  mr4c.java.hadoop.MR4CInputFormat: Begin keyspace for split #2
+2015-07-21 16:16:20,246 INFO  mr4c.java.hadoop.MR4CInputFormat: 1 elements for dimension [NAME] are [2]
+2015-07-21 16:16:20,246 INFO  mr4c.java.hadoop.MR4CInputFormat: No missing elements for dimension [NAME]
+2015-07-21 16:16:20,246 INFO  mr4c.java.hadoop.MR4CInputFormat: End keyspace for split #2
+2015-07-21 16:16:20,250 INFO  mr4c.java.hadoop.MR4CInputFormat: Hosts for split #2 are [gpu]
+2015-07-21 16:16:20,250 INFO  mr4c.java.AlgoRunner: Begin writing logs datasets
+2015-07-21 16:16:20,250 INFO  mr4c.java.AlgoRunner: End writing logs datasets
+2015-07-21 16:16:20,607 INFO  mr4c.java.hadoop.LocalHadoopAlgoRunner: Job URL is [http://gpu:8088/proxy/application_1437461722678_0003/]
