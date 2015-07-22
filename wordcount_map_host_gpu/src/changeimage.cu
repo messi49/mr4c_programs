@@ -1,14 +1,40 @@
 #include "algo_dev_api.h"
 #include <iostream>
 #include <string.h>
+#include <stdlib.h>
 
 using namespace MR4C;
 using namespace std;
 
-typedef struct WordCount{
-	char * word;
-	int count;
-};
+const int N = 20;
+
+__global__
+void count_word(char *a, int *c, int size) 
+{
+	int i = 0, k = 0;
+	int count = 1;
+
+	if(threadIdx.x < size){
+
+		for(i = 0; i < size; i++){
+			if(threadIdx.x != i){
+				for(k = 0; k < N; k++){
+					if(a[N * threadIdx.x + k] != a[N * i + k]){
+						break;
+					}
+					if(k == N - 1){
+						count++;
+					}
+				}
+			}
+		}
+
+		c[threadIdx.x] = count;
+	}
+	else{
+		c[threadIdx.x] = -1;
+	}
+}
 
 //extend the Algorithm class                          
 class ChangeImage : public Algorithm {
@@ -25,8 +51,8 @@ public:
 		std::set<DataKey> keys = input->getAllFileKeys();
 	
 		//... iterate through input keys and do work ...
-		for ( std::set<DataKey>::iterator i = keys.begin(); i != keys.end(); i++ ) {	
-			DataKey myKey = *i;
+		for ( std::set<DataKey>::iterator itr = keys.begin(); itr != keys.end(); itr++ ) {	
+			DataKey myKey = *itr;
 			DataFile* myFile = input->getDataFile(myKey);
 			int fileSize=myFile->getSize();
 			char * fileBytes=myFile->getBytes();
@@ -42,55 +68,104 @@ public:
 			//print original file contents
 			std::cout<<"  original file contents: "<<fileBytes;
 
-			std::vector<WordCount> counter;
-
 			char *tok;
+			char *word_ary;
 			char mark[] = " .,\n";
-			int p = 0;
-			int matchflag = 0;
+			int size = 0;
+			int i = 0, k = 0;
 
+			// allocate memory
+			word_ary = (char *)malloc(sizeof(char) * N * N);
+			memset(word_ary, 0, sizeof(char) * N * N);
+
+			// input words
 			tok = strtok(fileBytes, mark);
 			while( tok != NULL ){
-				for(p=0; p < counter.size(); p++){
-					if(strcmp(counter[p].word, tok) == 0){
-						counter[p].count++;
-						matchflag = 1;
-						break;
-					}
-				}
-				if(matchflag == 1){
-					matchflag = 0;
-				}
-				else{
-					if(strlen(tok) > 0)
-						counter.push_back((WordCount){tok, 1});
-				}
-				tok = strtok( NULL, mark);  /* 2回目以降 */
+				strcpy(&word_ary[size * N], tok);
+				tok = strtok( NULL, mark);
+				size++;
 			}
 
-			size_t len = counter.size() * (20 + 2);
-			char * textout = (char *)malloc(len + 1);
-			memset(textout, 0, sizeof(textout));
-			char buf[22];
+			size--;
 
-			printf("Answer(size = %d): \n", counter.size());
-			for(p=0; p < counter.size() - 1; p++){
-				sprintf(buf, "%s,%d\n", counter[p].word, counter[p].count);
+			char *ad;
+			int *cd;
+
+			int count[N];
+
+			const int csize = N*N*sizeof(char);
+			const int isize = N*sizeof(int);
+
+			cudaMalloc( (void**)&ad, csize ); 
+			cudaMalloc( (void**)&cd, isize );
+
+			cudaMemcpy( ad, word_ary, csize, cudaMemcpyHostToDevice ); 
+
+			dim3 dimBlock( size, 1 );
+			dim3 dimGrid( 1, 1 );
+			count_word<<<dimGrid, dimBlock>>>(ad, cd, size);
+			cudaMemcpy( count, cd, isize, cudaMemcpyDeviceToHost ); 
+			cudaFree( ad );
+			cudaFree( cd );
+
+			char answer_words[size][N];
+			int answer_count[size];
+
+			int num = 0;
+			int dismatchflag = 0;
+
+			for(i = 0; i < size; i++){
+				if(count[i] == -1){
+					break;
+				}
+
+				if(count[i] == 1){
+					strncpy(answer_words[num], &word_ary[N * i], N);
+					answer_count[num] = count[i];
+					num++;
+				}
+				else if(count[i] > 1){
+					for(k = 0; k < num; k++){
+						if(strncmp(&word_ary[N * i], answer_words[k], N) == 0){
+							dismatchflag = 1;
+							break;
+						}
+					}
+					if(dismatchflag == 0){
+						strncpy(answer_words[num], &word_ary[N * i], N);
+						answer_count[num] = count[i];
+						num++;
+					}
+					else{
+						dismatchflag = 0;
+					}
+				}
+			}
+
+
+			char * textout = (char *)malloc(num * N + 2);
+			memset(textout, 0, num * N + 2);
+			char buf[N + 2];
+
+			for(i=0; i < num - 1; i++){
+				sprintf(buf, "%s,%d\n",answer_words[i], answer_count[i]);
 				strcat(textout, buf);
 				memset(buf, 0, sizeof(buf));
 			}
 
 			//print new output file contents
-			printf("%s", textout);
+			printf("textout: \n%s", textout);
 			//std::cout<<"  output file contents: "<<fileBytes;
 
 			//close message block		
 			std::cout<<nativeHdr<<std::endl;
 			
 			// output file in the output folder
+			
 			Dataset* output = data.getOutputDataset("imageOut");
 			DataFile* fileData = new DataFile(textout, strlen(textout), "testOut.bin");
 			output->addDataFile(myKey, fileData);
+			
 		}
 	}
 
