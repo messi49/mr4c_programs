@@ -93,11 +93,12 @@ public:
 			}
 
 			size--;
-
+			
 			char *ad;
 			int *cd;
 
-			int count[N];
+			int *count;
+			count = (int *)malloc(sizeof(int) * size);
 
 			const int csize = N * size * sizeof(char);
 			const int isize = size * sizeof(int);
@@ -153,7 +154,7 @@ public:
 			memset(textout, 0, sizeof(char) * (num * N + 2));
 			char buf[N + 2];
 
-			for(i=0; i < num - 1; i++){
+			for(i=0; i < num; i++){
 				sprintf(buf, "%s,%d\n",answer_words[i], answer_count[i]);
 				strcat(textout, buf);
 				memset(buf, 0, sizeof(buf));
@@ -173,7 +174,9 @@ public:
 
 			// mem free
 			//free(word_ary);
+			//free(count);
 			//free(textout);
+			
 		}
 	}
 

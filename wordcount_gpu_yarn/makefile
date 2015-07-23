@@ -1,4 +1,5 @@
 CC=g++
+NVCC=nvcc
 SRC_DIR =./src
 LIB=./lib
 OBJ_DIR=./objs
@@ -12,6 +13,9 @@ MR4CLIB = $(MR4C_HOME)/native/lib
 GDALINC = /usr/include/gdal
 GDALLIB = /usr/local/lib
 
+CUDALINK = /usr/local/cuda/include
+CUDALIB = /usr/local/cuda/lib64
+
 #default target
 all: clean init compile libMap libReduce
 
@@ -23,14 +27,14 @@ init:
 	mkdir -p $(LIB)
 	mkdir -p $(OBJ_DIR)
 
-compile: $(SRC_DIR)/map.cpp $(SRC_DIR)/reduce.cpp
-	$(CC) -c -I$(MR4CINC)  -I$(MR4CGEOINC) -I$(GDALINC) -I$(SRC_DIR) -fPIC -Wall -std=c++0x -o $(OBJ_DIR)/map.o $(SRC_DIR)/map.cpp
-	$(CC) -c -I$(MR4CINC) -I$(MR4CGEOINC) -I$(SRC_DIR) -fPIC -Wall -std=c++0x -o $(OBJ_DIR)/reduce.o $(SRC_DIR)/reduce.cpp
+compile: $(SRC_DIR)/map.cu $(SRC_DIR)/reduce.cu
+	$(NVCC) -c -I$(MR4CINC)  -I$(MR4CGEOINC) -I$(GDALINC) -I$(CUDALINK) -I$(SRC_DIR) -Xcompiler -fPIC --compiler-options -Wall -std=c++11 -o $(OBJ_DIR)/map.o $(SRC_DIR)/map.cu
+	$(NVCC) -c -I$(MR4CINC) -I$(MR4CGEOINC) -I$(CUDALINK) -I$(SRC_DIR) -Xcompiler -fPIC --compiler-options -Wall -std=c++11 -o $(OBJ_DIR)/reduce.o $(SRC_DIR)/reduce.cu
 
 libMap: $(OBJ_DIR)/map.o
-	$(CC) -L$(MR4CLIB) -L$(MR4CGEOLIB) -L$(GDALLIB) -rdynamic -shared -fPIC $(OBJ_DIR)/map.o -o $(LIB)/libMap.so -lmr4c -lmr4cgeo -lgdal
+	$(NVCC) -L$(MR4CLIB) -L$(MR4CGEOLIB) -I$(GDALLIB) -L$(CUDALIB) -Xcompiler -rdynamic -shared -Xcompiler -fPIC $(OBJ_DIR)/map.o -o $(LIB)/libMap.so -lmr4c -lmr4cgeo -lcuda
 
 libReduce: $(OBJ_DIR)/reduce.o
-	$(CC) -L$(MR4CLIB) -rdynamic -shared -fPIC -o $(LIB)/libReduce.so $(OBJ_DIR)/reduce.o -lmr4c
+	$(NVCC) -L$(MR4CLIB) -L$(CUDALIB) -Xcompiler -rdynamic -shared -Xcompiler -fPIC -o $(LIB)/libReduce.so $(OBJ_DIR)/reduce.o -lmr4c -lcuda
 
 .PHONY: clean, libMap, libReduce, init, all

@@ -107,7 +107,8 @@ public:
 			int *bd;
 			int *cd;
 
-			int count[N];
+			int *count;
+			count = (int *)malloc(sizeof(int) * size);
 
 			const int csize = N * size * sizeof(char);
 			const int isize = size * sizeof(int);
@@ -185,8 +186,8 @@ public:
 			DataFile* fileData = new DataFile(textout, strlen(textout), "testOut.bin");
 			output->addDataFile(myKey, fileData);
 
-			free(word_ary);
-			free(textout);
+			//free(word_ary);
+			//free(textout);
 		}
 	}
 
