@@ -154,14 +154,14 @@ public:
 			memset(textout, 0, sizeof(char) * (num * N + 2));
 			char buf[N + 2];
 
-			for(i=0; i < num; i++){
+			for(i=0; i < num - 1; i++){
 				sprintf(buf, "%s,%d\n",answer_words[i], answer_count[i]);
 				strcat(textout, buf);
 				memset(buf, 0, sizeof(buf));
 			}
 
 			//print new output file contents
-			printf("%s\n", textout);
+			printf("\nAnswer: \n%s\n", textout);
 			//std::cout<<"  output file contents: "<<fileBytes;
 
 			//close message block		

@@ -16,10 +16,10 @@ fi
 
 #run mr4c
 #mapper
-mr4c_hadoop ./map.json -Htasks=2 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048
+mr4c_hadoop ./map.json -Htasks=1 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048
 
 #pause between map and reduce
-#sleep 1
+sleep 1
 
 #reducer
-#mr4c_hadoop ./reduce.json -Htasks=1 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048
+mr4c_hadoop ./reduce.json -Htasks=1 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048

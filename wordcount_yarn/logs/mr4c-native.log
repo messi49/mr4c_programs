@@ -1,6 +1,6 @@
-2015-07-21 18:11:43,146 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(167): Loaded MR4C logging config only from file /etc/mr4c/log4cxx.properties
-2015-07-21 18:11:43,146 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c
-2015-07-21 18:11:43,146 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.algo is going to ./logs/mr4c-algo.log
-2015-07-21 18:11:43,146 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.native is going to ./logs/mr4c-native.log
-2015-07-21 18:11:43,146 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c.native.util.MR4CLogging
-2015-07-21 18:11:43,147 INFO  mr4c.native.algorithm.AlgorithmRegistry src/cpp/impl/algorithm/AlgorithmRegistry.cpp(50): Registered algorithm [reduce]
+2015-07-23 17:44:30,387 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(167): Loaded MR4C logging config only from file /etc/mr4c/log4cxx.properties
+2015-07-23 17:44:30,387 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c
+2015-07-23 17:44:30,387 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.algo is going to ./logs/mr4c-algo.log
+2015-07-23 17:44:30,387 INFO  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(188): Logger mr4c.native is going to ./logs/mr4c-native.log
+2015-07-23 17:44:30,387 WARN  mr4c.native.util.MR4CLogging src/cpp/impl/util/MR4CLogging.cpp(191): No file appenders found for logger mr4c.native.util.MR4CLogging
+2015-07-23 17:44:30,387 INFO  mr4c.native.algorithm.AlgorithmRegistry src/cpp/impl/algorithm/AlgorithmRegistry.cpp(50): Registered algorithm [reduce]
