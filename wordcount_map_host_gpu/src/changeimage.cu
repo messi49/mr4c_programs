@@ -4,7 +4,6 @@
 #include <stdlib.h>
 
 using namespace MR4C;
-using namespace std;
 
 const int N = 20;
 
@@ -73,6 +72,7 @@ public:
 			char mark[] = " .,\n";
 			int size = 0;
 			int i = 0, k = 0;
+			int allocate_size = N;
 
 			// allocate memory
 			word_ary = (char *)malloc(sizeof(char) * N * N);
@@ -81,6 +81,12 @@ public:
 			// input words
 			tok = strtok(fileBytes, mark);
 			while( tok != NULL ){
+				// reallocate memory
+				if(size == allocate_size - 5){
+					allocate_size += N;
+					word_ary = (char *)realloc(word_ary, sizeof(char) * allocate_size * N);
+					memset(&word_ary[N * size], 0, sizeof(char) * (allocate_size - size) * N);
+				}
 				strcpy(&word_ary[size * N], tok);
 				tok = strtok( NULL, mark);
 				size++;
@@ -93,8 +99,8 @@ public:
 
 			int count[N];
 
-			const int csize = N*N*sizeof(char);
-			const int isize = N*sizeof(int);
+			const int csize = N * size * sizeof(char);
+			const int isize = size * sizeof(int);
 
 			cudaMalloc( (void**)&ad, csize ); 
 			cudaMalloc( (void**)&cd, isize );
@@ -143,8 +149,8 @@ public:
 			}
 
 
-			char * textout = (char *)malloc(num * N + 2);
-			memset(textout, 0, num * N + 2);
+			char * textout = (char *)malloc(sizeof(char) * (num * N + 2));
+			memset(textout, 0, sizeof(char) * (num * N + 2));
 			char buf[N + 2];
 
 			for(i=0; i < num - 1; i++){
@@ -154,18 +160,20 @@ public:
 			}
 
 			//print new output file contents
-			printf("textout: \n%s", textout);
+			printf("%s\n", textout);
 			//std::cout<<"  output file contents: "<<fileBytes;
 
 			//close message block		
 			std::cout<<nativeHdr<<std::endl;
 			
 			// output file in the output folder
-			
 			Dataset* output = data.getOutputDataset("imageOut");
 			DataFile* fileData = new DataFile(textout, strlen(textout), "testOut.bin");
 			output->addDataFile(myKey, fileData);
-			
+
+			// mem free
+			//free(word_ary);
+			//free(textout);
 		}
 	}
 
